@@ -63,28 +63,26 @@ h2#titulo {
     margin-bottom: 20px;
 }
 
-/* Container das plantas (cards) */
 #container_planta {
     display: flex;
     flex-direction: column;
-    gap: 10px;               /* espaço ENTRE cards reduzido */
+    gap: 10px;
     margin: 15px 0;
     max-height: 400px;
     overflow-y: auto;
     padding-right: 8px;
 }
 
-/* Cada card – agora com a classe .card */
 #container_planta .card {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
-    padding: 8px 12px;       /* espaço INTERNO do card menor */
+    padding: 8px 12px;
     border: 1px solid rgba(184, 226, 171, 0.4);
     transition: transform 0.2s, background 0.2s;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 4px 12px;           /* gap vertical 4px, horizontal 12px */
+    gap: 4px 12px;
 }
 
 #container_planta .card:hover {
@@ -92,31 +90,27 @@ h2#titulo {
     background: rgba(255, 255, 255, 0.15);
 }
 
-/* Título do card – cor esverdeada mais viva */
 #container_planta .card h2 {
-    width: 100%;             /* ocupa toda a largura, isolado na primeira linha */
+    width: 100%;
     margin: 0 0 2px 0;
     font-weight: 600;
     font-size: 18px;
-    color: #e9ffd2;          /* verde mais vivo (ou #c5f77a, #d4ff8c) */
+    color: #e9ffd2;
 }
 
-/* Informações da planta (tipo | data) */
 #container_planta .card-info {
     font-size: 13px;
     font-weight: 300;
     color: rgba(255, 255, 255, 0.85);
     margin: 0;
-    flex: 1;                /* ocupa espaço restante */
+    flex: 1;
 }
 
-/* Container dos botões (para garantir que fiquem lado a lado) */
 .card-botoes {
     display: flex;
     gap: 8px;
 }
 
-/* Botões dentro dos cards */
 #container_planta button {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -126,7 +120,7 @@ h2#titulo {
     padding: 5px 12px;
     cursor: pointer;
     transition: transform 0.2s, opacity 0.2s;
-    width: auto;             /* largura automática */
+    width: auto;
     min-width: 85px;
     background-clip: padding-box;
 }
@@ -146,7 +140,6 @@ button.excluir-planta {
     color: white;
 }
 
-/* Container dos botões principais (inferior) */
 #container_botoes {
     display: flex;
     justify-content: center;
@@ -157,7 +150,6 @@ button.excluir-planta {
     flex-wrap: wrap;
 }
 
-/* Botões principais */
 #container_botoes button {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -178,22 +170,18 @@ button.excluir-planta {
     background: rgba(0, 0, 0, 0.6);
 }
 
-/* Botão Atualizar */
 button#jardim_recarregar {
     background: linear-gradient(to right, #3498db, #2980b9);
 }
 
-/* Botão Adicionar */
 button#jardim_adicionar {
     background: linear-gradient(to right, #9EF01A, #61C322, #179317);
 }
 
-/* Botão Sair */
 button#jardim_sair {
     background: linear-gradient(to right, #e74c3c, #c0392b);
 }
 
-/* Personalização da scrollbar (opcional) */
 #container_planta::-webkit-scrollbar {
     width: 6px;
 }

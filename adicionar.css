@@ -18,7 +18,6 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-/* ✨ ANIMAÇÃO DE ENTRADA ✨ */
 fieldset {
     position: relative;
     backdrop-filter: blur(10px);
@@ -60,7 +59,7 @@ h2#titulo {
 div#conteudo {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;  /* mais separação entre colunas */
+    gap: 60px;
     margin-bottom: 30px;
 }
 
@@ -86,7 +85,7 @@ input, select {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-size: 12.5px;
-    width: 100%;          /* antes era 400px, agora responsivo */
+    width: 100%;
     padding: 12px;
     box-sizing: border-box;
     border-radius: 5px;
@@ -96,13 +95,11 @@ input, select {
     transition: all 0.2s ease;
 }
 
-/* ✨ HOVER NOS INPUTS ✨ */
 input:hover, select:hover {
     background-color: rgba(217, 217, 217, 0.35);
     border-color: rgba(106, 155, 202, 0.9);
 }
 
-/* ✨ FOCO (clique) NOS INPUTS ✨ */
 input:focus, select:focus {
     outline: none;
     background-color: rgba(217, 217, 217, 0.5);
@@ -124,7 +121,6 @@ select option {
     color: rgba(105, 105, 105, 0.7);
 }
 
-/* ✨ CONTAINER DOS BOTÕES ✨ */
 div#container_botao {
     display: flex;
     justify-content: center;
@@ -135,7 +131,6 @@ div#container_botao {
     flex-wrap: wrap;
 }
 
-/* ✨ BOTÃO CADASTRAR (verde) ✨ */
 button#adicionar_cadastrar {
     background: linear-gradient(to right, #9EF01A, #61C322, #179317);
     cursor: pointer;
@@ -156,7 +151,6 @@ button#adicionar_cadastrar:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* ✨ BOTÃO VOLTAR (azul) ✨ */
 button#adicionar_retornar {
     background: linear-gradient(to right, #1ab3f0, #0b68c0, #062c7e);
     cursor: pointer;
@@ -177,13 +171,11 @@ button#adicionar_retornar:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* ✨ EF EITO DE CLIQUE (ativação) ✨ */
 button#adicionar_cadastrar:active,
 button#adicionar_retornar:active {
     transform: scale(0.98);
 }
 
-/* Responsividade extra */
 @media (max-width: 800px) {
     div#conteudo {
         grid-template-columns: 1fr;
