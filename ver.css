@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    color: white;
+    background-image: url('fundo_pagina.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ✨ ANIMAÇÃO DE ENTRADA ✨ */
+fieldset#visualizar_fieldset {
+    position: relative;
+    backdrop-filter: blur(10px);
+    background: rgba(225, 240, 219, 0.171);
+    border-radius: 23px;
+    border: 1px solid rgba(184, 226, 171, 0.562);
+    width: 900px;
+    max-width: calc(100% - 40px);
+    padding: 20px 40px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    animation: fadeScaleIn 0.4s ease-out;
+}
+
+@keyframes fadeScaleIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+h3#subtitulo {
+    font-weight: 400;
+    font-size: 19px;
+    margin-bottom: 0;
+}
+
+h2#titulo {
+    margin-top: 5px;
+    font-weight: 600;
+    font-size: 33.72px;
+}
+
+div.conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 30px;
+}
+
+.coluna {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 500;
+    font-size: 18px;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    transition: color 0.2s;
+}
+
+.visualizar_input {
+    width: 100%;
+}
+
+input, select {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 12.5px;
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: rgba(217, 217, 217, 0.2);
+    border: 1px solid rgb(106, 155, 202);
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.2s ease;
+}
+
+/* Estilo para campos desabilitados (visualização) */
+input:disabled, select:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    background-color: rgba(217, 217, 217, 0.1);
+}
+
+/* ✨ HOVER NOS INPUTS (só se não estiver desabilitado) ✨ */
+input:not(:disabled):hover, select:not(:disabled):hover {
+    background-color: rgba(217, 217, 217, 0.35);
+    border-color: rgba(106, 155, 202, 0.9);
+}
+
+/* ✨ FOCO NOS INPUTS ✨ */
+input:not(:disabled):focus, select:not(:disabled):focus {
+    outline: none;
+    background-color: rgba(217, 217, 217, 0.5);
+    border-color: #9EF01A;
+    box-shadow: 0 0 5px rgba(158, 240, 26, 0.5);
+    color: white;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    transition: opacity 0.2s;
+}
+
+input:not(:disabled):focus::placeholder {
+    opacity: 0.5;
+}
+
+select option {
+    color: rgba(105, 105, 105, 0.7);
+}
+
+/* ✨ CONTAINER DOS BOTÕES ✨ */
+div#container_botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 75px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+/* ✨ BOTÃO EDITAR (verde, igual ao cadastrar) ✨ */
+button#visualizar_editar {
+    background: linear-gradient(to right, #9EF01A, #61C322, #179317);
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: white;
+    font-size: 15px;
+    border: none;
+    border-radius: 5.5px;
+    padding: 15px;
+    width: 270px;
+    transition: transform 0.2s, opacity 0.2s, box-shadow 0.2s;
+}
+
+button#visualizar_editar:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ✨ BOTÃO VOLTAR (azul) ✨ */
+button#visualizar_retornar {
+    background: linear-gradient(to right, #1ab3f0, #0b68c0, #062c7e);
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: white;
+    font-size: 15px;
+    border: none;
+    border-radius: 5.5px;
+    padding: 15px;
+    width: 270px;
+    transition: transform 0.2s, opacity 0.2s, box-shadow 0.2s;
+}
+
+button#visualizar_retornar:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ✨ EFEITO DE CLIQUE (ativação) ✨ */
+button#visualizar_editar:active,
+button#visualizar_retornar:active {
+    transform: scale(0.98);
+}
+
+/* Responsividade extra (igual ao adicionar) */
+@media (max-width: 800px) {
+    div.conteudo {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    div#container_botao {
+        gap: 20px;
+    }
+    button#visualizar_editar,
+    button#visualizar_retornar {
+        width: 100%;
+        max-width: 270px;
+    }
+}

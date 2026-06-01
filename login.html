@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Projeto Eva</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <form id="login">
+        <fieldset id="login_fieldset">
+            <h2 id="titulo">Login</h2>
+            <h3 id="subtitulo">Olha quem voltou!</h3>
+
+            <label for="login_email">Email</label>
+
+            <div class="login_input" id="container_email">
+                <input
+                type="text"
+                name="email"
+                id="login_email"
+                maxlength="500"
+                placeholder="exemplo@dominio.com"
+                required>
+            </div>
+
+            <label for="login_senha">Senha</label>
+
+            <div class="login_input" id="container_senha">
+                <input 
+                type="password"
+                name="senha"
+                id="login_senha"
+                maxlength="500"
+                minlength="5"
+                placeholder="Insira sua senha"
+                required>
+                <button type="button" class="mostrarsenha" id="mostrarsenha">mostrar</button>
+            </div>
+
+            <div class="container" id="container_inferior">
+                <button type="submit" name="entrar" id="login_entrar">Entrar</button>
+                <p>Ainda não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+            </div>
+
+        </fieldset>
+    </form>
+<script src="login.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Projeto Eva</title>
+    <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+    <form id="cadastro">
+        <fieldset id="cadastro_fieldset">
+            <h2 id="titulo">Cadastro</h2>
+            <h3 id="subtitulo">Seja bem-vindo!</h3>
+
+            <div class="conteudo">
+
+            <div class="coluna">
+
+            <label for="cadastro_nome">Usuário</label>
+            <div class="cadastro_input" id="container_nome">
+                <input 
+                type="text"
+                name="nome"
+                id="cadastro_nome"
+                minlength="10"
+                maxlength="250"
+                placeholder="Digite seu nome"
+                required>
+            </div>
+
+            <label for="cadastro_email">Email</label>
+            <div class="cadastro_input" id="container_email">
+                <input
+                type="text"
+                name="email"
+                id="cadastro_email"
+                maxlength="500"
+                placeholder="exemplo@dominio.com"
+                required>
+            </div>
+
+            </div>
+
+            <div class="coluna">
+
+            <label for="cadastro_senha">Senha</label>
+            <div class="cadastro_input" id="container_senha">
+                <input 
+                type="password"
+                name="senha"
+                id="cadastro_senha"
+                maxlength="500"
+                minlength="5"
+                placeholder="Insira sua senha"
+                required>
+                <button type="button" class="mostrar" id="mostrarsenha">mostrar</button>
+            </div>
+
+            <label for="cadastro_confirmar">Confirmar senha</label>
+            <div class="cadastro_input" id="container_confirmar">
+                <input 
+                type="password"
+                name="confirmarsenha"
+                id="cadastro_confirmar"
+                maxlength="500"
+                minlength="5"
+                placeholder="Confirmar sua senha"
+                required>
+                <button type="button" class="mostrar" id="mostrarconfirmar">mostrar</button>
+            </div>
+
+            </div>
+
+            </div>
+
+            <div class="cadastro_input" id="container_inferior">
+                <button type="submit" name="cadastrar" id="cadastrarusuario">Cadastre-se</button>
+                <p>Você já tem uma conta? <a href="login.html">Faça login</a></p>
+            </div>
+        </fieldset>
+    </form>
+<script src="cadastro.js" type="module"></script>
+</body>
+</html>

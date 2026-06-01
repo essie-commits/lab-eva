@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Plantação | Projeto Eva</title>
+    <link rel="stylesheet" href="ver.css">
+</head>
+<body>
+    <form id="visualizar">
+        <fieldset id="visualizar_fieldset">
+            <h3 id="subtitulo">esta é sua</h3>
+            <h2 id="titulo">Plantação</h2>
+
+            <div class="conteudo">
+                <div class="coluna">
+
+            <label for="visualizar_descricao">Nome</label>
+            <div class="visualizar_input" id="container_descricao">
+                <input 
+                type="text"
+                name="descricao" 
+                id="visualizar_descricao"
+                minlength="5"
+                maxlength="200"
+                placeholder="Dê nome à sua plantação"
+                required
+                disabled>
+            </div>
+
+            <label for="visualizar_inicio">Início do Cultivo</label>
+            <div class="visualizar_input" id="container_inicio">
+                <input 
+                type="date" 
+                name="inicio" 
+                id="visualizar_inicio" 
+                required
+                disabled>
+            </div>
+
+            <label for="visualizar_tipo">Tipo de Planta</label>
+
+            <select name="tipo" id="visualizar_tipo" disabled>
+                <option value="0" disabled selected>Selecione o tipo</option>
+                <option value="frutas">Frutas</option>
+                <option value="verduras">Verduras</option>
+                <option value="legumes">Legumes</option>
+                <option value="cereais">Cereais e Grãos</option>
+                <option value="flores">Flores</option>
+                <option value="ornamentais">Plantas Ornamentais</option>
+                <option value="ervas">Ervas</option>
+            </select>
+
+            </div>
+            <div class="coluna">
+
+            <label for="visualizar_local">Local da Plantação</label>
+
+            <div class="visualizar_input" id="container_local">
+                <input 
+                type="text" 
+                name="local" 
+                id="visualizar_local"
+                minlength="5"
+                maxlength="500"
+                placeholder="Localize a sua plantação"
+                disabled>
+            </div>
+
+            <label for="visualizar_colheita">Ponto de Colheita</label>
+
+            <div class="visualizar_input" id="container_colheita">
+                <input 
+                type="number" 
+                name="colheita" 
+                id="visualizar_colheita"
+                max="365"
+                disabled>
+            </div>
+
+            </div>
+
+            </div>
+
+            <div class="visualizar_inferior" id="container_botao">
+                <button type="submit" name="editar" id="visualizar_editar">Editar Plantação</button>
+                <button type="button" name="retornar" id="visualizar_retornar">Voltar para Meu Jardim</button>
+            </div>
+
+        </fieldset>
+    </form>
+<script src="ver.js" type="module"></script>
+</body>
+</html>

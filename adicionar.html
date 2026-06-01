@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Plantação | Projeto Eva</title>
+<link rel="stylesheet" href="adicionar.css">
+</head>
+<body>
+    <form id="adicionar">
+        <fieldset id="adicionar_fieldset">
+            <h3 id="subtitulo">cadastre sua</h3>
+            <h2 id="titulo">Nova Plantação</h2>
+
+            <div id="conteudo">
+
+            <div class="coluna">
+
+            <label for="adicionar_descricao">Descrição</label>
+            <div class="adicionar_input" id="container_descricao">
+                <input 
+                type="text"
+                name="descricao" 
+                id="adicionar_descricao"
+                minlength="5"
+                maxlength="200"
+                placeholder="Dê nome à sua plantação"
+                required>
+            </div>
+
+            <label for="adicionar_inicio">Início do Cultivo</label>
+            <div class="adicionar_input" id="container_inicio">
+                <input 
+                type="date" 
+                name="inicio" 
+                id="adicionar_inicio" 
+                required>
+            </div>
+
+            <label for="adicionar_tipo">Tipo de Planta</label>
+
+            <select name="tipo" id="adicionar_tipo">
+                <option value="0" disabled selected>Selecione o tipo</option>
+                <option value="frutas">Frutas</option>
+                <option value="verduras">Verduras</option>
+                <option value="legumes">Legumes</option>
+                <option value="cereais">Cereais e Grãos</option>
+                <option value="flores">Flores</option>
+                <option value="ornamentais">Plantas Ornamentais</option>
+                <option value="ervas">Ervas</option>
+            </select>
+
+            </div>
+
+            <div class="coluna">
+
+            <label for="adicionar_local">Local da Plantação</label>
+
+            <div class="adicionar_input" id="container_local">
+                <input 
+                type="text" 
+                name="local" 
+                id="adicionar_local"
+                minlength="5"
+                maxlength="500"
+                placeholder="Localize a sua plantação"
+                >
+            </div>
+
+            <label for="adicionar_colheita">Ponto de Colheita</label>
+
+            <div class="adicionar_input" id="container_colheita">
+                <input 
+                type="number" 
+                name="colheita" 
+                id="adicionar_colheita"
+                max="365"
+                placeholder="Selecione em quantos dias pode-se esperar a colheita">
+            </div>
+
+            </div>
+
+            </div>
+
+            <div class="adicionar_inferior" id="container_botao">
+                <button type="submit" name="cadastrar" id="adicionar_cadastrar">Cadastrar plantação</button>
+                <button type="button" name="retornar" id="adicionar_retornar">Voltar para Meu Jardim</button>
+            </div>
+
+        </fieldset>
+    </form>
+<script src="adicionar.js" type="module"></script>
+</body>
+</html>
