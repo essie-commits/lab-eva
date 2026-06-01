@@ -122,9 +122,6 @@ async function salvarPlanta(nome, inicio, tipo, local, colheita) {
 
         })
 
-        popUp('Planta salva!', '#3ce745')
-
-
     } catch (error) {
 
         popUp('Não foi possível cadastrar nova plantação!', '#e74c3c')

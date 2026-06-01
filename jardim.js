@@ -32,7 +32,16 @@ async function verJardim() {
 
             for (const p of plantas) {
 
-                planta += `<h3>${p.nome}</h3>` + `${p.tipo} | ${p.inicio}` + `<button class="visualizar-planta" data-id="${p.id}">Visualizar</button>` + `<button class="excluir-planta" data-id="${p.id}">Excluir</button>`
+                planta += `
+                    <div class="card">
+                        <h2>${p.nome}</h2>
+                        <div class="card-info">${p.tipo} | ${p.inicio}</div>
+                        <div class="card-botoes">
+                            <button class="visualizar-planta" data-id="${p.id}">Visualizar</button>
+                            <button class="excluir-planta" data-id="${p.id}">Excluir</button>
+                        </div>
+                    </div>
+                `
 
             };
 

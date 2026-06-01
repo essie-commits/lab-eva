@@ -18,7 +18,7 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Animação de entrada suave */
+
 fieldset#jardim_fieldset {
     position: relative;
     backdrop-filter: blur(10px);
@@ -34,7 +34,6 @@ fieldset#jardim_fieldset {
     animation: fadeScaleIn 0.4s ease-out;
 }
 
-/* Keyframes da animação de entrada */
 @keyframes fadeScaleIn {
     0% {
         opacity: 0;
@@ -68,41 +67,53 @@ h2#titulo {
 #container_planta {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin: 20px 0;
+    gap: 10px;               /* espaço ENTRE cards reduzido */
+    margin: 15px 0;
     max-height: 400px;
     overflow-y: auto;
-    padding-right: 10px;
+    padding-right: 8px;
 }
 
-/* Estilo de cada card de planta */
-#container_planta > div, 
-#container_planta > h3 + * {
+/* Cada card – agora com a classe .card */
+#container_planta .card {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
-    padding: 15px;
+    padding: 8px 12px;       /* espaço INTERNO do card menor */
     border: 1px solid rgba(184, 226, 171, 0.4);
     transition: transform 0.2s, background 0.2s;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 12px;           /* gap vertical 4px, horizontal 12px */
 }
 
-#container_planta > div:hover,
-#container_planta > h3 + *:hover {
+#container_planta .card:hover {
     transform: translateY(-3px);
     background: rgba(255, 255, 255, 0.15);
 }
 
-/* Texto dentro dos cards */
-#container_planta h3 {
-    margin: 0 0 8px 0;
+/* Título do card – cor esverdeada mais viva */
+#container_planta .card h2 {
+    width: 100%;             /* ocupa toda a largura, isolado na primeira linha */
+    margin: 0 0 2px 0;
     font-weight: 600;
-    font-size: 20px;
-    color: #9EF01A;
+    font-size: 18px;
+    color: #e9ffd2;          /* verde mais vivo (ou #c5f77a, #d4ff8c) */
 }
 
-#container_planta p {
-    margin: 5px 0;
+/* Informações da planta (tipo | data) */
+#container_planta .card-info {
+    font-size: 13px;
     font-weight: 300;
-    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+    flex: 1;                /* ocupa espaço restante */
+}
+
+/* Container dos botões (para garantir que fiquem lado a lado) */
+.card-botoes {
+    display: flex;
+    gap: 8px;
 }
 
 /* Botões dentro dos cards */
@@ -112,11 +123,12 @@ h2#titulo {
     font-size: 12px;
     border: none;
     border-radius: 5px;
-    padding: 6px 12px;
-    margin-top: 10px;
-    margin-right: 10px;
+    padding: 5px 12px;
     cursor: pointer;
     transition: transform 0.2s, opacity 0.2s;
+    width: auto;             /* largura automática */
+    min-width: 85px;
+    background-clip: padding-box;
 }
 
 #container_planta button:hover {

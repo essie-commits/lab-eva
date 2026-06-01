@@ -62,13 +62,15 @@ function enableEditing(enable) {
 
     const inputs = ['visualizar_descricao', 'visualizar_inicio', 'visualizar_local', 'visualizar_colheita'];
 
-    inputs.forEach(id => document.getElementById(id).readOnly = !enable);
+    inputs.forEach(id => document.getElementById(id).disabled = !enable);
 
     document.getElementById('visualizar_tipo').disabled = !enable;
 
 }
 
-btnPrincipal.addEventListener('click', async () => {
+btnPrincipal.addEventListener('click', async (e) => {
+
+    e.preventDefault();
 
     if (!editando) {
 
